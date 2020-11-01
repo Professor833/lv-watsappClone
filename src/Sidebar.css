@@ -1,69 +1,69 @@
 .sidebar {
-    flex: 0.35;    
-    border: 1px solid #252B2E;    
-    overflow-y: scroll; 
-    overflow-x: hidden;
+  flex: 0.35;
+  border: 1px solid #252b2e;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .sidebar__search {
-    display: flex;
-    align-items: center;
-    background-color: #131C21;
-    padding: 10px;
-    border: 1px solid #252B2E;
+  display: flex;
+  align-items: center;
+  background-color: #131c21;
+  padding: 10px;
+  border: 1px solid #252b2e;
 }
-
 
 .Sidebar__searchContaier {
-    display: flex;
-    align-items: center;
-    background-color:  #323739;
-    width: 100%;
-    height: 35px;    
-    border-radius: 25px;    
-}
-
-.Sidebar__searchContaier > .MuiSvgIcon-root {    
-    color: #696D70;
-    padding: 10px;
-}
-
-.Sidebar__searchContaier > input {
-    color: aliceblue;
-    border: none;
-    margin-left: 10px;
-    background-color:  #323739;
-    font-size: large;
-}
-
-.sidebar__header {
-    display: flex;
-    justify-content: space-between;
-    padding: 18px;
-    border-right: 1px solid lightgray;
-    background-color: #323739;    
-}
-
-.sidebar__headerRight {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-width: 10vw;
+  display: flex;
+  align-items: center;
+  background-color: #323739;
+  width: 100%;
+  height: 35px;
+  border-radius: 25px;
 }
 
 .Sidebar__searchContaier > .MuiSvgIcon-root {
-    /* margin-right: 2vw; */
-    font-size: 24px !important;
+  color: #696d70;
+  padding: 10px;
+}
+
+.Sidebar__searchContaier > input {
+  color: aliceblue;
+  border: none;
+  margin-left: 10px;
+  background-color: #323739;
+  font-size: large;
+}
+
+.sidebar__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px;
+  border-right: 1px solid lightgray;
+  background-color: #323739;
+}
+
+.sidebar__headerRight {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 10vw;
+}
+
+.Sidebar__searchContaier > .MuiSvgIcon-root {
+  /* margin-right: 2vw; */
+  font-size: 24px !important;
 }
 
 .sidebar__chats {
-    flex: 1;
-    /* background-color: #696D70;     */
+  flex: 1;
+  /* background-color: #696D70;     */
 }
 
-/* .SidebarChat {
-    flex: 1;
-    background-color: blue;
-    overflow-y: scroll;
-    overflow-x: hidden;
-} */
+.sidebar__userName {
+  display: flex;
+  flex: 1;
+  margin-left: 30px;
+  /* background-color: blue; */
+  color: aliceblue;
+}
