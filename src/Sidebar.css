@@ -55,10 +55,10 @@
   font-size: 24px !important;
 }
 
-.sidebar__chats {
+/* .sidebar__chats {
   flex: 1;
-  /* background-color: #696D70;     */
-}
+  background-color: #696D70;  
+} */
 
 .sidebar__userName {
   display: flex;
