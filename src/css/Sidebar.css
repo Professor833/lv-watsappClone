@@ -63,7 +63,12 @@
 .sidebar__userName {
   display: flex;
   flex: 1;
-  margin-left: 30px;
-  /* background-color: blue; */
+  margin-left: 15px;
+  align-items: center;
+  font-size: 22px;
   color: aliceblue;
+}
+
+.last__msg {
+  width: 230px;
 }

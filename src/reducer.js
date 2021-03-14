@@ -1,6 +1,6 @@
 // initailState represents how the dataLayer Looks (we start with user not being logged in)
 export const initialState = {
-  user: "null",
+  user: null, // turn this off (to string or any value to use without logging)
 };
 
 export const actionTypes = {

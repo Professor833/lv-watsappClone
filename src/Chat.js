@@ -12,7 +12,9 @@ import { useStateValue } from "./StateProvider";
 // import firestore from 'firebase/firestore'
 import firebase from "firebase";
 
-function Chat() {
+function Chat({ defaultPage }) {
+  const [noRoomSelected, setNoRoomSelected] = useState(true);
+
   // States
   const [input_msg, setinput_msg] = useState("");
   const [seed, setSeed] = useState("");
@@ -24,6 +26,10 @@ function Chat() {
   const [roomName, setroomName] = useState("");
 
   useEffect(() => {
+    if (!defaultPage) {
+      setNoRoomSelected(false);
+    }
+
     if (roomId) {
       db.collection("rooms")
         .doc(roomId)
@@ -37,7 +43,7 @@ function Chat() {
           setmessages(snapshot.docs.map((doc) => doc.data()))
         );
     }
-  }, [roomId]);
+  }, [roomId, defaultPage]);
 
   useEffect(() => {
     // change seed value once when page loads and another when roomId changes
@@ -68,12 +74,14 @@ function Chat() {
         {/* Info about chat */}
         <Avatar src={random_url} />
         <div className="chatHeader__info">
-          <h3>{roomName}</h3>
+          <h3>{noRoomSelected ? user.displayName : roomName}</h3>
           <p>
-            last seen{" "}
-            {new Date(
-              messages[messages.length - 1]?.timestamp?.toDate()
-            ).toUTCString()}
+            {noRoomSelected
+              ? "selcect any chat "
+              : "last seen " +
+                new Date(
+                  messages[messages.length - 1]?.timestamp?.toDate()
+                ).toUTCString()}
           </p>
         </div>
 

@@ -23,7 +23,7 @@ function App() {
                 <Chat />
               </Route>
               <Route path="/">
-                <Chat />
+                <Chat defaultPage={true} />
               </Route>
             </Switch>
           </Router>

@@ -29,7 +29,11 @@ function Sidebar() {
     <div className="sidebar">
       <div className="sidebar__header">
         <Avatar src={user?.photoURL} />
-        <h2 className="sidebar__userName">{user?.displayName}</h2>
+        <h2 className="sidebar__userName">
+          {String(user?.displayName).length > 15
+            ? String(user?.displayName).slice(0, 15) + " ..."
+            : String(user?.displayName)}
+        </h2>
         <div className="sidebar__headerRight">
           <IconButton color="inherit">
             <DonutLargeIcon />

@@ -33,7 +33,7 @@
 
 .chat__body {
   flex: 1;
-  background-image: url("./default_background_black.png");
+  /* background-image: url("./default_background_black.png"); */
   background-repeat: repeat;
   background-position: center;
   padding: 30px;
@@ -49,6 +49,8 @@
   background-color: #262d31;
   width: fit-content;
   margin-bottom: 30px;
+  max-width: 415px;
+  overflow-wrap: break-word;
 }
 
 .user__name {

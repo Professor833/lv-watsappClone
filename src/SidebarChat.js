@@ -40,10 +40,12 @@ function SidebarChat({ id, name, addNewChat }) {
         <Avatar src={random_url} />
         <div className="sidebarChat__info">
           <h2>{name}</h2>
-          <p>
+          <p className="last__msg">
             {
               // since we sorted messages in desc fashion first msg will be most recent one
-              messages[0]?.message
+              String(messages[0]?.message).length > 25
+                ? String(messages[0]?.message).slice(0, 25) + " ..."
+                : String(messages[0]?.message)
             }
           </p>
         </div>
