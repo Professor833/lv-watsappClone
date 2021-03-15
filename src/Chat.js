@@ -11,6 +11,7 @@ import db from "./Fbase";
 import { useStateValue } from "./StateProvider";
 // import firestore from 'firebase/firestore'
 import firebase from "firebase";
+import dark_bg_image from "./default_background_black.png";
 
 function Chat({ defaultPage }) {
   const [noRoomSelected, setNoRoomSelected] = useState(true);
@@ -69,7 +70,7 @@ function Chat({ defaultPage }) {
 
   // messages.map((msg, index) => {console.log("msg Id ==>>>> ", messages, index)})
   return (
-    <div className="chat">
+    <div className="chat" style={{ backgroundImage: `url(${dark_bg_image})` }}>
       <div className="chat__header">
         {/* Info about chat */}
         <Avatar src={random_url} />
